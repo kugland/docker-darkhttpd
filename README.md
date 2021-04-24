@@ -7,6 +7,12 @@ is built `FROM scratch` and the `darkhttpd` binary is statically linked, so as t
 very small. To use it, just mount your files (preferentially in read-only mode) into `/www` and,
 if you like, expose port 80.
 
+## Links
+
+Page in GitHub: https://github.com/kugland/docker-darkhttpd
+
+Page in DockerHub: https://hub.docker.com/r/kugland/darkhttpd
+
 ## Features
 
 - Image has less than 300kb.
