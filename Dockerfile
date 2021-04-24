@@ -51,7 +51,7 @@ ARG BUILD_DATE
 LABEL org.label-schema.schema-version="1.0" \
       org.label-schema.description="Serve static files with statically-linked darkhttpd." \
       org.label-schema.name="kugland/darkhttpd" \
-      org.label-schema.version=$VERSION \
+      org.label-schema.version=1.13 \
       org.label-schema.docker-cmd="docker run -d -p 8000:80 -v \$PWD/www:/www kugland/darkhttpd:latest" \
       org.label-schema.url="https://hub.docker.com/r/kugland/darkhttpd" \
       org.label-schema.vcs-url="https://github.com/kugland/docker-darkhttpd" \
