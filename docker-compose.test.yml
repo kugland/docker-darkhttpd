@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  sut:
+    image: curlimages/curl:latest
+    entrypoint: /bin/sh
+    command: /run-test.sh
+    volumes:
+      - "./run-test.sh:/run-test.sh:ro"
+    depends_on:
+      - darkhttpd
+  darkhttpd:
+    build:
+      context: '.'
+    volumes:
+      - "./www-test:/www:ro"
