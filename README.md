@@ -1,4 +1,4 @@
-# docker-httpd
+# docker-darkhttpd
 
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/kugland/darkhttpd) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/kugland/darkhttpd/latest) ![GitHub](https://img.shields.io/github/license/kugland/docker-darkhttpd)
 
