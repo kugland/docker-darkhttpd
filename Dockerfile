@@ -22,8 +22,6 @@ ENV CFLAGS=" \
   -Wl,-z,now                              \
   -Wl,-z,relro                            \
   -Wl,-z,noexecstack                      \
-  -mindirect-branch=thunk                 \
-  -mfunction-return=thunk                 \
 "
 
 WORKDIR /darkhttpd/build
