@@ -1,4 +1,4 @@
-name: ci
+name: build-and-push
 
 on:
   push:
@@ -27,4 +27,4 @@ jobs:
         with:
           platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x
           push: true
-          tags: kugland/darkhttpd:latest
+          tags: kugland/darkhttpd:latest,kugland/darkhttpd:1.13
