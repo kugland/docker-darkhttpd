@@ -1,8 +1,6 @@
 FROM alpine:latest AS build
 
 ENV VERSION=1.13
-ENV SRC_URL=https://github.com/emikulic/darkhttpd/archive/refs/tags/v${VERSION}.tar.gz \
-    SRC_SHA256SUM=1d88c395ac79ca9365aa5af71afe4ad136a4ed45099ca398168d4a2014dc0fc2
 
 # Hardening GCC opts taken from these sources:
 # https://developers.redhat.com/blog/2018/03/21/compiler-and-linker-flags-gcc/
@@ -26,14 +24,11 @@ ENV CFLAGS=" \
 
 WORKDIR /darkhttpd/build
 
+COPY ./v${VERSION}.tar.gz ./
+
 # Download source tarball
 RUN { \
-  set -e ; \
-  wget "${SRC_URL}" ; \
-  if [[ "$SRC_SHA256SUM" != "$(sha256sum "v${VERSION}.tar.gz" | cut -c0-64 -)" ]]; then \
-    echo -e '\n\n*** ERROR: SOURCE FAILED INTEGRITY CHECK! ***\n\n' ; \
-    exit 1 ; \
-  fi ; \
+  set -eux ; \
   tar -xzf "v${VERSION}.tar.gz" ; \
   apk --no-cache add gcc musl-dev ; \
   gcc ${CFLAGS} -static -o ../darkhttpd "darkhttpd-${VERSION}/darkhttpd.c" ; \
@@ -52,9 +47,7 @@ LABEL org.label-schema.schema-version="1.0" \
       org.label-schema.version=1.13 \
       org.label-schema.docker-cmd="docker run -d -p 8000:80 -v \$PWD/www:/www kugland/darkhttpd:latest" \
       org.label-schema.url="https://hub.docker.com/r/kugland/darkhttpd" \
-      org.label-schema.vcs-url="https://github.com/kugland/docker-darkhttpd" \
-      org.label-schema.build-date=$BUILD_DATE \
-      org.label-schema.vcs-ref=$VCS_REF
+      org.label-schema.vcs-url="https://github.com/kugland/docker-darkhttpd"
 
 VOLUME [ "/www" ]
 

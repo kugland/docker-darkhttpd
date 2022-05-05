@@ -2,3 +2,4 @@
 !/mime.types
 !/passwd
 !/group
+!/v*.tar.gz
