@@ -1,6 +1,6 @@
 # docker-darkhttpd
 
-![darkhttpd version](https://img.shields.io/badge/darkhttpd-v1.13-yellow) ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/kugland/docker-darkhttpd/build-and-push.yml?branch=main&logo=githubactions) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/kugland/darkhttpd?logo=docker) ![License](https://img.shields.io/github/license/kugland/docker-darkhttpd)
+![darkhttpd version](https://img.shields.io/badge/darkhttpd-v1.14-yellow) ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/kugland/docker-darkhttpd/build-and-push.yml?branch=main&logo=githubactions) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/kugland/darkhttpd?logo=docker) ![License](https://img.shields.io/github/license/kugland/docker-darkhttpd)
 
 This image uses [`darkhttpd`](https://unix4lyfe.org/darkhttpd/) to serve static files. This image
 is built `FROM scratch` and the `darkhttpd` binary is statically linked, so as to make the image

@@ -41,7 +41,7 @@ FROM scratch
 
 LABEL org.opencontainers.image.title="kugland/darkhttpd" \
       org.opencontainers.image.description="Serve static files with statically-linked darkhttpd." \
-      org.opencontainers.image.version="1.13" \
+      org.opencontainers.image.version="1.14" \
       org.opencontainers.image.url="https://hub.docker.com/r/kugland/darkhttpd" \
       org.opencontainers.image.source="https://github.com/kugland/docker-darkhttpd"
 
