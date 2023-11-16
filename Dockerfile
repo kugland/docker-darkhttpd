@@ -1,6 +1,6 @@
 FROM alpine:latest AS build
 
-ARG VERSION=1.13
+ARG VERSION=1.14
 
 # Hardening GCC opts taken from these sources:
 # https://developers.redhat.com/blog/2018/03/21/compiler-and-linker-flags-gcc/
